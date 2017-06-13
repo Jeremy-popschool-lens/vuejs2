@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css"/>
+  <style>
+
+  .main.container {
+
+    padding-top: 50px;
+  }
+
+  .header-item {
+    color: white;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="ui inverted fixed menu">
+    <div class="header-item">Tutoriel</div>
+  </div>
+  <div class="ui main container" id="app">
+
+    <input type="checkbox" v-model="success"/>
+    <div class="ui message" :class="{success: success, error: !success}">
+      <i class="close icon" v-on:click="close"></i>
+      <p>{{ Message }}</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+  <script src="JS/app.js"></script>
+
+
+</body>
+</html>
